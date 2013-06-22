@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["lightyang0@gmail.com"]
   spec.description   = %q{An OmniAuth strategy for implementing IVLE login}
   spec.summary       = %q{An OmniAuth strategy for IVLE}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/lightyang/omniauth-ivle"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
