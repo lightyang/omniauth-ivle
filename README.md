@@ -20,9 +20,11 @@ Or install it yourself as:
 
 Add this strategy to your application:
 
+```ruby
 use OmniAuth::Builder do
     provider :ivle, api_key: YOUR_API_KEY
 end
+```
 
 ## License
 
