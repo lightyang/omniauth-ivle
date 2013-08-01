@@ -29,13 +29,15 @@ module OmniAuth
 
       # fetch user profile
       def profile
+        return @profile unless @profile.nil?
+
         token = request.params["token"]
         profile_url = "#{options.profile_url}?APIKey=#{options.api_key}&AuthToken=#{token}"
 
         conn = Faraday.new(url: profile_url)
         response = conn.get
         json = MultiJson.decode(response.body)
-        json["Results"][0]
+        @profile = json["Results"][0]
       end
 
     end
