@@ -27,6 +27,10 @@ module OmniAuth
         { profile: profile }
       end
 
+      credentials do
+        { token: request.params["token"] }
+      end
+
       # fetch user profile
       def profile
         return @profile unless @profile.nil?
